@@ -3,7 +3,7 @@ import React from "react";
 const History = ({ tdelete, thistory }) => {
   return (
     <>
-      <div className="w-1/4 h-fit mt-4 flex flex-col mx-auto">
+      <div className="w-1/2 h-fit mt-4 flex flex-col ml-4">
         <div className="border-b-2 border-black text-3xl">History</div>
 
         <div>

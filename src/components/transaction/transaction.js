@@ -2,7 +2,7 @@ import React from "react";
 
 const Transaction = ({ name, amount, tname, tamount, tadd }) => {
   return (
-    <div className="w-1/4 mx-auto">
+    <div className="w-1/2 ml-4">
       <h5 className="text-3xl flex justify-center mx-auto border-b-2 border-black">
         Add New Transaction
       </h5>

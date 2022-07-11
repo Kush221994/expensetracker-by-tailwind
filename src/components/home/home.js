@@ -3,6 +3,7 @@ import Header from "../header/header";
 import Balance from "../balance/balance";
 import History from "../history/history";
 import Transaction from "../transaction/transaction";
+import Chart from "../charts/chart";
 const Home = () => {
   const [name, setName] = useState("");
   const [amount, setAmount] = useState(0);
@@ -59,21 +60,24 @@ const Home = () => {
   };
   return (
     <>
-      <div className="w-full h-screen bg-gray-400 mx-auto flex flex-col">
-        <Header />
-        <Balance
-          tamount={totalamt}
-          tincome={income}
-          texpense={Math.abs(expense)}
-        />
-        <History tdelete={deleteHandler} thistory={history} />
-        <Transaction
-          name={name}
-          amount={amount}
-          tname={nameHandler}
-          tamount={amountHandler}
-          tadd={submitHandler}
-        />
+      <Header />
+      <div className="w-full h-screen bg-gray-400  flex flex-row ">
+        <div className="w-1/2 flex flex-col justify-start">
+          <Balance
+            tamount={totalamt}
+            tincome={income}
+            texpense={Math.abs(expense)}
+          />
+          <History tdelete={deleteHandler} thistory={history} />
+          <Transaction
+            name={name}
+            amount={amount}
+            tname={nameHandler}
+            tamount={amountHandler}
+            tadd={submitHandler}
+          />
+        </div>
+        <Chart tincome={income} texpense={Math.abs(expense)} />
       </div>
     </>
   );

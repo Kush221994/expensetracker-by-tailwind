@@ -3,7 +3,7 @@ import React from "react";
 const Balance = ({ tamount, tincome, texpense }) => {
   return (
     <>
-      <div className="w-1/4 h-fit mx-auto flex flex-col mt-4">
+      <div className="w-1/2 h-fit ml-4 flex flex-col mt-4">
         <div className="text-3xl border-b-2 border-black font-bold">
           Your Balance:
         </div>
