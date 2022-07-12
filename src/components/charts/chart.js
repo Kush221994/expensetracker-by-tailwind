@@ -13,31 +13,31 @@ const Chart = ({ tincome, texpense }) => {
       <div className="w-2/5 flex flex-col">
         <div className=" flex flex-row gap-x-12 mt-2">
           <button
-            className=" px-3 bg-green-700 rounded-md font-bold"
+            className=" px-3 bg-green-700 flex rounded-md font-bold"
             onClick={() => setActive("BarChart")}
           >
             BarChart
           </button>
           <button
-            className="px-3 bg-green-700 rounded-md font-bold"
+            className="px-3 bg-green-700 flex rounded-md font-bold"
             onClick={() => setActive("LineChart")}
           >
             LineChart
           </button>
           <button
-            className="px-3 bg-green-700 rounded-md font-bold"
+            className="px-3 bg-green-700 flex rounded-md font-bold"
             onClick={() => setActive("PieChart")}
           >
             PieChart
           </button>
           <button
-            className="px-3 bg-green-700 rounded-md font-bold"
+            className="px-3 bg-green-700 flex rounded-md font-bold"
             onClick={() => setActive("FlowChart")}
           >
             FlowChart
           </button>
         </div>
-        <div className="flex flex-col gap-4">
+        <div>
           {active === "BarChart" && (
             <BarChart tincome={tincome} texpense={texpense} />
           )}

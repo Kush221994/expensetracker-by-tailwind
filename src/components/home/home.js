@@ -61,7 +61,7 @@ const Home = () => {
   return (
     <>
       <Header />
-      <div className="w-full min-w-screen h-fit min-h-screen bg-gray-400  flex flex-row ">
+      <div className="w-full h-fit min-h-screen bg-gray-400  flex flex-row ">
         <div className="w-1/2 flex flex-col justify-start">
           <Balance
             tamount={totalamt}
