@@ -3,6 +3,8 @@ import BarChart from "./barChart";
 import LineChart from "./lineChart";
 import PieChart from "./pieChart";
 import FlowChart from "./flowChart";
+import IncomeNode from "./incomeNode";
+import ExpenseNode from "./expenseNode";
 
 const Chart = ({ tincome, texpense }) => {
   const [active, setActive] = React.useState("");
@@ -11,24 +13,27 @@ const Chart = ({ tincome, texpense }) => {
       <div className="w-2/5 flex flex-col">
         <div className=" flex flex-row gap-x-12 mt-2">
           <button
-            className=" h-10 bg-green-700 rounded-md font-bold"
+            className=" px-3 bg-green-700 rounded-md font-bold"
             onClick={() => setActive("BarChart")}
           >
             BarChart
           </button>
           <button
-            className="h-10 bg-green-700 rounded-md font-bold"
+            className="px-3 bg-green-700 rounded-md font-bold"
             onClick={() => setActive("LineChart")}
           >
             LineChart
           </button>
           <button
-            className="h-10 bg-green-700 rounded-md font-bold"
+            className="px-3 bg-green-700 rounded-md font-bold"
             onClick={() => setActive("PieChart")}
           >
             PieChart
           </button>
-          <button className="h-10 bg-green-700 rounded-md font-bold">
+          <button
+            className="px-3 bg-green-700 rounded-md font-bold"
+            onClick={() => setActive("FlowChart")}
+          >
             FlowChart
           </button>
         </div>
@@ -45,6 +50,8 @@ const Chart = ({ tincome, texpense }) => {
           {active === "FlowChart" && (
             <FlowChart tincome={tincome} texpense={texpense} />
           )}
+          <IncomeNode tincome={tincome} />
+          <ExpenseNode texpense={texpense} />
         </div>
       </div>
     </>

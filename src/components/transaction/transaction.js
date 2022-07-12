@@ -34,7 +34,9 @@ const Transaction = ({ name, amount, tname, tamount, tadd }) => {
         <button
           className="w-1/2 h-10 bg-blue-600 rounded-md font-bold hover: cursor-pointer"
           onClick={tadd}
+          disabled={!amount}
         >
+          {/* It is used when the value of amount is null or zero */}
           Add Transaction
         </button>
       </div>
